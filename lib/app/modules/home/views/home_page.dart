@@ -90,7 +90,7 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-        backgroundColor: Colors.grey,
+        backgroundColor: Color(0xff1f1f1f),
         appBar: AppBarWidget(
           title: 'GloboPlay',
         ),
@@ -99,7 +99,20 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text('Populares'),
+              const SizedBox(
+                height: 25,
+              ),
+              const Text(
+                'Populares',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              const SizedBox(
+                height: 25,
+              ),
               if (popular.isNotEmpty) ...[
                 Container(
                   width: MediaQuery.of(context).size.width,
@@ -122,10 +135,20 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ],
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
-              Text('Novidades'),
+              const Text(
+                'Novidades',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              const SizedBox(
+                height: 25,
+              ),
               if (topRated.isNotEmpty) ...[
                 Container(
                   width: MediaQuery.of(context).size.width,
