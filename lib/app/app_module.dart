@@ -1,3 +1,4 @@
+import 'package:app_test/app/modules/splash/splash_module.dart';
 import 'package:app_test/app/repositories/home/home_repository.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -18,7 +19,8 @@ class AppModule extends Module {
 
   @override
   List<ModularRoute> get routes => [
-        ModuleRoute("/", module: HomeModule()),
+        ModuleRoute("/", module: SplashModule()),
+        ModuleRoute("/home", module: HomeModule()),
         ModuleRoute("/favorites", module: FavoritesModule()),
       ];
 }
