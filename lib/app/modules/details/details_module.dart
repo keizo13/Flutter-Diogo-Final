@@ -1,13 +1,13 @@
 import 'package:flutter_modular/flutter_modular.dart';
 
-import 'views/favorites_page.dart';
+import 'views/details_page.dart';
 
-class FavoritesModule extends Module {
+class DetailsModule extends Module {
   @override
   List<ModularRoute> get routes => [
         ChildRoute(
           '/',
-          child: (_, __) => const FavoritesPage(),
+          child: (_, arguments) => DetailsPage(args: arguments.data.toString()),
         ),
       ];
 }

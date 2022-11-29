@@ -36,4 +36,20 @@ class HomeRepository {
       rethrow;
     }
   }
+
+  Future<Map<String, dynamic>> getDetailsMovie(String id) async {
+    try {
+      var response = await http.get(
+        'https://api.themoviedb.org/3/movie/$id',
+        queryParameters: {
+          'api_key': 'fec699f7fbbce2834ceb4e65bd90440f',
+          'language': 'en-US',
+          'page': 1,
+        },
+      );
+      return response.data;
+    } catch (e) {
+      rethrow;
+    }
+  }
 }

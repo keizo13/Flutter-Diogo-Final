@@ -1,29 +1,35 @@
-import 'package:app_test/app/modules/home/views/home_page.dart';
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
-void main() {
-  runApp(const SplashPage());
-}
-
-class SplashPage extends StatelessWidget {
+class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
+
   @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomePage(),
-    );
-  }
+  State<SplashPage> createState() => _SplashPageState();
 }
 
-class Splash extends StatelessWidget {
-  const Splash({Key? key}) : super(key: key);
+class _SplashPageState extends State<SplashPage> {
+  @override
+  void initState() {
+    super.initState();
+    timerCount();
+  }
+
+  void timerCount() {
+    Timer(const Duration(seconds: 3), () {
+      Modular.to.pushNamed('home');
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Image(
-        image: AssetImage('assets/images/splash.png'),
-        fit: BoxFit.cover,
+    return Scaffold(
+      body: SizedBox(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: Image.asset('assets/images/splash.png'),
       ),
     );
   }

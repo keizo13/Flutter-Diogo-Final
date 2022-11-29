@@ -33,7 +33,6 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  google_fonts: ^3.0.1
   cupertino_icons: ^1.0.5
   flutter_dotenv: ^5.0.2
   flutter_modular: ^5.0.3
@@ -66,32 +65,13 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
-    - assets/icons/
-    - assets/fonts/
-    - assets/fonts/google_fonts/
+    - assets/images/
+    - assets/images/splash.png
     - assets/translations/
     - .env.local
     - .env.development
     - .env.production
     - .env.test
-
-  fonts:
-    - family: NunitoSans
-      fonts:
-        - asset: assets/fonts/google_fonts/NunitoSans-Black.ttf
-        - asset: assets/fonts/google_fonts/NunitoSans-BlackItalic.ttf
-        - asset: assets/fonts/google_fonts/NunitoSans-Bold.ttf
-        - asset: assets/fonts/google_fonts/NunitoSans-BoldItalic.ttf
-        - asset: assets/fonts/google_fonts/NunitoSans-ExtraBold.ttf
-        - asset: assets/fonts/google_fonts/NunitoSans-ExtraBoldItalic.ttf
-        - asset: assets/fonts/google_fonts/NunitoSans-ExtraLight.ttf
-        - asset: assets/fonts/google_fonts/NunitoSans-ExtraLightItalic.ttf
-        - asset: assets/fonts/google_fonts/NunitoSans-Italic.ttf
-        - asset: assets/fonts/google_fonts/NunitoSans-Light.ttf
-        - asset: assets/fonts/google_fonts/NunitoSans-LightItalic.ttf
-        - asset: assets/fonts/google_fonts/NunitoSans-Regular.ttf
-        - asset: assets/fonts/google_fonts/NunitoSans-SemiBold.ttf
-        - asset: assets/fonts/google_fonts/NunitoSans-SemiBoldItalic.ttf
 
   uses-material-design: true
   # The following line ensures that the Material Icons font is

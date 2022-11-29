@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage> {
                 width: 35,
               ),
               InkWell(
-                onTap: () => Modular.to.pushNamed('favorites'),
+                onTap: () => Modular.to.pushNamed('/details', arguments: 50),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -121,14 +121,18 @@ class _HomePageState extends State<HomePage> {
                     scrollDirection: Axis.horizontal,
                     itemCount: popular['results'].length,
                     itemBuilder: (context, i) {
-                      return Container(
-                        width: 150,
-                        margin: EdgeInsets.symmetric(horizontal: 5),
-                        child: Column(
-                          children: [
-                            Image.network(
-                                'https://www.themoviedb.org/t/p/w220_and_h330_face/${popular['results'][i]['poster_path']}'),
-                          ],
+                      return InkWell(
+                        onTap: () => Modular.to.pushNamed('/details',
+                            arguments: popular['results'][i]['id']),
+                        child: Container(
+                          width: 150,
+                          margin: EdgeInsets.symmetric(horizontal: 5),
+                          child: Column(
+                            children: [
+                              Image.network(
+                                  'https://www.themoviedb.org/t/p/w220_and_h330_face/${popular['results'][i]['poster_path']}'),
+                            ],
+                          ),
                         ),
                       );
                     },
@@ -157,14 +161,18 @@ class _HomePageState extends State<HomePage> {
                     scrollDirection: Axis.horizontal,
                     itemCount: topRated['results'].length,
                     itemBuilder: (context, i) {
-                      return Container(
-                        width: 150,
-                        margin: EdgeInsets.symmetric(horizontal: 5),
-                        child: Column(
-                          children: [
-                            Image.network(
-                                'https://www.themoviedb.org/t/p/w220_and_h330_face/${topRated['results'][i]['poster_path']}'),
-                          ],
+                      return InkWell(
+                        onTap: () => Modular.to.pushNamed('/details',
+                            arguments: topRated['results'][i]['id']),
+                        child: Container(
+                          width: 150,
+                          margin: EdgeInsets.symmetric(horizontal: 5),
+                          child: Column(
+                            children: [
+                              Image.network(
+                                  'https://www.themoviedb.org/t/p/w220_and_h330_face/${topRated['results'][i]['poster_path']}'),
+                            ],
+                          ),
                         ),
                       );
                     },
