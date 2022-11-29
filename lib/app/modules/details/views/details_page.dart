@@ -83,24 +83,40 @@ class _DetailsPageState extends State<DetailsPage> {
               ),
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    onPrimary: Color(0xff3e424d),
+                    primary: Colors.white,
+                  ),
                   onPressed: () {},
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.play_arrow,
                     size: 24.0,
                   ),
-                  label: Text('Download'), // <-- Text
+                  label: Text('Play'), // <-- Text
                 ),
                 ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    onPrimary: Color(0xffbbcdd1),
+                    primary: Colors.black,
+                    minimumSize: Size(200, 80),
+                  ),
                   onPressed: () {},
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.star,
                     size: 24.0,
                   ),
-                  label: Text('Download'), // <-- Text
+                  label: Text('Minha lista'), // <-- Text
                 ),
               ],
+            ),
+            OutlinedButton(
+              child: Text("olsss"),
+              onPressed: () {
+                print('You selected all posts');
+              },
             ),
           ],
         ));
