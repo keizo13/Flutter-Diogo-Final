@@ -34,12 +34,75 @@ class _DetailsPageState extends State<DetailsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        alignment: Alignment.center,
-        child: Text(
-          widget.args,
-        ),
-      ),
-    );
+        backgroundColor: Colors.black,
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const SizedBox(
+              height: 50,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'assets/images/splash.png',
+                  height: 200,
+                  width: 100,
+                  alignment: Alignment.center,
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            const Text(
+              "Orgulho e Paixao",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 32,
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            const Text(
+              "Novela",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 10,
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            const Text(
+              "Orgulho e Paixao olaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaa",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 24,
+              ),
+            ),
+            Row(
+              children: [
+                ElevatedButton.icon(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.play_arrow,
+                    size: 24.0,
+                  ),
+                  label: Text('Download'), // <-- Text
+                ),
+                ElevatedButton.icon(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.star,
+                    size: 24.0,
+                  ),
+                  label: Text('Download'), // <-- Text
+                ),
+              ],
+            ),
+          ],
+        ));
   }
 }
