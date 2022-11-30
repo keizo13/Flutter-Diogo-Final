@@ -111,7 +111,7 @@ class _HomePageState extends State<HomePage> {
                 height: 25,
               ),
               const Text(
-                'Populares',
+                'Recomendados',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 24,
@@ -119,26 +119,26 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               const SizedBox(
-                height: 25,
+                height: 20,
               ),
-              if (popular.isNotEmpty) ...[
+              if (latest.isNotEmpty) ...[
                 SizedBox(
                   width: MediaQuery.of(context).size.width,
                   height: 300,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemCount: popular['results'].length,
+                    itemCount: latest['results'].length,
                     itemBuilder: (context, i) {
                       return InkWell(
                         onTap: () => Modular.to.pushNamed('/details',
-                            arguments: popular['results'][i]['id']),
+                            arguments: latest['results'][i]['id']),
                         child: Container(
                           width: 150,
                           margin: const EdgeInsets.symmetric(horizontal: 5),
                           child: Column(
                             children: [
                               Image.network(
-                                  'https://www.themoviedb.org/t/p/w220_and_h330_face/${popular['results'][i]['poster_path']}'),
+                                  'https://www.themoviedb.org/t/p/w220_and_h330_face/${latest['results'][i]['poster_path']}'),
                             ],
                           ),
                         ),
@@ -147,6 +147,9 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ],
+              const SizedBox(
+                height: 25,
+              ),
               const SizedBox(
                 height: 25,
               ),
@@ -191,7 +194,7 @@ class _HomePageState extends State<HomePage> {
                 height: 25,
               ),
               const Text(
-                'Recomendados',
+                'Populares',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 24,
@@ -201,24 +204,24 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(
                 height: 25,
               ),
-              if (latest.isNotEmpty) ...[
+              if (popular.isNotEmpty) ...[
                 SizedBox(
                   width: MediaQuery.of(context).size.width,
                   height: 300,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemCount: latest['results'].length,
+                    itemCount: popular['results'].length,
                     itemBuilder: (context, i) {
                       return InkWell(
                         onTap: () => Modular.to.pushNamed('/details',
-                            arguments: latest['results'][i]['id']),
+                            arguments: popular['results'][i]['id']),
                         child: Container(
                           width: 150,
                           margin: const EdgeInsets.symmetric(horizontal: 5),
                           child: Column(
                             children: [
                               Image.network(
-                                  'https://www.themoviedb.org/t/p/w220_and_h330_face/${latest['results'][i]['poster_path']}'),
+                                  'https://www.themoviedb.org/t/p/w220_and_h330_face/${popular['results'][i]['poster_path']}'),
                             ],
                           ),
                         ),
@@ -226,7 +229,7 @@ class _HomePageState extends State<HomePage> {
                     },
                   ),
                 ),
-              ]
+              ],
             ],
           ),
         ),
