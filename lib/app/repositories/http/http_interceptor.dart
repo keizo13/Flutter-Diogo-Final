@@ -1,18 +1,9 @@
 import 'package:dio/dio.dart';
 
+// O interceptor é para implementar uma interceptação na Header da chamada do Dio API
 class HttpInterceptor extends InterceptorsWrapper {
   Dio dio;
 
-  // UserModel user = Modular.get();
-
   HttpInterceptor({required this.dio});
-
-  // @override
-  // onRequest(options, handler) async {
-  //   if (user.token != null || user.token != '') {
-  //     options.headers['Authorization'] = 'Bearer ${user.token}';
-  //   }
-
-  //   return handler.next(options);
-  // }
 }
+//quando dio faz uma chamada faz um interceptador

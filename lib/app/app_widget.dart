@@ -2,8 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-import 'core/configs/theme_config.dart';
-
+// Onde o aplicativo se inicia
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
 
@@ -11,7 +10,6 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'App Test',
-      theme: ThemeConfig(context).lightTheme,
       debugShowCheckedModeBanner: false,
       routeInformationParser: Modular.routeInformationParser,
       routerDelegate: Modular.routerDelegate,

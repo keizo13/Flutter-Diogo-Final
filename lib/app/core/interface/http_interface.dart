@@ -10,3 +10,4 @@ abstract class HttpInterface {
   Future post(String endpoint, {required Map<String, dynamic> data});
   Future delete(String endpoint, {required Map<String, dynamic> data});
 }
+//configuracao de api padrao do dio, esta no repositorio

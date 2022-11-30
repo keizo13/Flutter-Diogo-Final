@@ -9,3 +9,4 @@ enum Flavors {
 
   String getEnvironment() => _environment;
 }
+//config dos env

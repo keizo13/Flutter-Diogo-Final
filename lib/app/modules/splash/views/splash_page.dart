@@ -27,7 +27,7 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SizedBox(
-        width: MediaQuery.of(context).size.width,
+        width: MediaQuery.of(context).size.width, //pega o tamanho do celular
         height: MediaQuery.of(context).size.height,
         child: Image.asset('assets/images/splash.png'),
       ),

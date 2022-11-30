@@ -5,6 +5,7 @@ import 'package:dio/dio.dart';
 import '../../core/interface/http_interface.dart';
 import 'http_interceptor.dart';
 
+// um modulo de configuracao dos metodos pego na internet
 class Http implements HttpInterface {
   late final Dio dio;
 

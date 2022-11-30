@@ -10,3 +10,4 @@ class SplashModule extends Module {
         ),
       ];
 }
+//Gerenciador de rotas
