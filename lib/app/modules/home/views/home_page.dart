@@ -77,7 +77,9 @@ class _HomePageState extends State<HomePage> {
                 width: 35,
               ),
               InkWell(
-                onTap: () => {},
+                onTap: () => Modular.to.pushNamed(
+                  '/favorites',
+                ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
@@ -147,9 +149,6 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ],
-              const SizedBox(
-                height: 25,
-              ),
               const SizedBox(
                 height: 25,
               ),
